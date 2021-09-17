@@ -8,6 +8,8 @@
     android:orientation="vertical"
     tools:context="com.example.android.miwok.MainActivity">
 
+<!--    -->
+<!--    testje-->
     <TextView
         android:id="@+id/numbers"
         style="@style/CategoryStyle"
