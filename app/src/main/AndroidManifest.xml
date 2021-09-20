@@ -10,6 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Miwok">
         <activity
+            android:name=".PrhasesActivity"
+            android:exported="true"
+            android:label="Phrases"
+            />
+        <activity
+            android:name=".ColoursActivity"
+            android:exported="true"
+            android:label="Colours"
+            />
+        <activity
+            android:name=".FamilyMebersActivity"
+            android:exported="true"
+            android:label="Family Members"
+            />
+        <activity
+            android:name=".NumbersActivity"
+            android:exported="true"
+            android:label="Numbers"
+            />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
