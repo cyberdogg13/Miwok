@@ -2,11 +2,10 @@ package com.example.android.miwok;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
+import android.text.Html;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -15,10 +14,9 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list_layout);
 
         ArrayList<Word> numbers = new ArrayList<Word>();
-       // numbers.add("one");
         numbers.add(new Word("one", "lutti"));
         numbers.add(new Word("two", "otiikko"));
         numbers.add(new Word("three", "tolookosu"));
