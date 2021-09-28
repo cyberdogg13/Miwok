@@ -45,6 +45,21 @@ public class WordAdapter extends ArrayAdapter<Word>{
         // set this text on the number TextView
         defaultTextView.setText(currentWord.getDefaultTranslation());
 
+        // Find the TextView in the list_item.xml layout with the ID version_number
+        ImageView defaultImageView = (ImageView) listItemView.findViewById(R.id.plaatje);
+        // Get the version number from the current AndroidFlavor object and
+        // set this text on the number TextView
+//        defaultImageView.setImageResource(currentWord.getImagelocation());
+
+        ImageView img = (ImageView) defaultImageView.findViewById(R.id.plaatje);
+
+        if (currentWord.hasImage()){
+            img.setImageResource(currentWord.getImagelocation());
+            img.setVisibility(View.VISIBLE);
+        }
+        else{img.setVisibility(View.GONE);}
+
+
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView
         return listItemView;
