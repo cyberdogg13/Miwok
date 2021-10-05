@@ -10,14 +10,19 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+
 import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Word>{
 
+    private int mColourResourceID;
+
     private static final String LOG_TAG = WordAdapter.class.getSimpleName();
 
-    public WordAdapter(Activity context, ArrayList<Word> numbers){
+    public WordAdapter(Activity context, ArrayList<Word> numbers, int ColourResourceID){
         super(context, 0, numbers );
+        mColourResourceID = ColourResourceID;
     }
 
     @NonNull
@@ -58,6 +63,12 @@ public class WordAdapter extends ArrayAdapter<Word>{
             img.setVisibility(View.VISIBLE);
         }
         else{img.setVisibility(View.GONE);}
+
+        View textcontainer = listItemView.getRootView().findViewById(R.id.text_container);
+        int Colour = ContextCompat.getColor(getContext(),  mColourResourceID);
+        textcontainer.setBackgroundColor(Colour);
+
+
 
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
