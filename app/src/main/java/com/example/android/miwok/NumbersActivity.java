@@ -46,6 +46,7 @@ public class NumbersActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Word word = numbers.get(position);
+                releaseMediaPlayer();
                 player = MediaPlayer.create(NumbersActivity.this, word.GetmAudioresourceID());
                 player.start();
 
